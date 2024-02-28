@@ -1,0 +1,661 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#080808;
+    color:#fff;
+}
+
+#header{
+    width:100%;
+    height: 100vh;
+   
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+    padding:10px 10%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 20px; /* Adjust the width as needed */
+    position: fixed;
+    top: 10px;
+    left: 10px; /* Adjust the left position as needed */
+    z-index: 2; /* Ensure it's above other elements */
+}
+
+
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:#EFEB7B;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top:20%;
+    font-size:30px;
+    position: relative;
+}
+
+
+.header-text h1{
+    font-size:60px;
+    margin-top:20px;
+}
+
+.header-text h1 span{
+    color:#EFEB7B;
+}
+
+
+/*-------about-----*/
+
+#about{
+    padding:80px 0;
+    color:#ababab;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.about-col-1{
+    flex-basis:35%;
+}
+
+.about-col-2{
+    flex-basis:60%;
+}
+
+.about-col-1 img{
+  width:100%;
+  border-radius:15px;
+}
+
+.sub-tilte{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff;
+}
+
+.college-name {
+    font-weight: bold; /* Add this line to make the college names bold */
+}
+
+.sub-title {
+    color: #fff;
+    font-weight: bold; /* Add this line if you want to make the sub-title bold */
+}
+
+
+
+
+.tab-titles{
+    display: flex;
+    margin:20px 0 40px;
+
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight:500 ;
+    cursor:pointer;
+    position:relative;
+}
+
+.tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition: 0.5s;
+
+}
+
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents{
+    list-style:none;
+    margin:10px 0;
+
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents active-tab{
+    display: block;
+}
+
+/*-------services------*/
+
+.services-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+    
+}
+
+.services-list div{
+    background: #262626;
+    padding:40px;
+    font-size:13px;
+    font-weight:300;
+    border-radius:10px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+
+services-list div i{
+    font-size:50px;
+    margin-bottom: 30px;
+
+}
+
+.services-list div h2{
+    font-size:30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+.services-list div a{
+    text-decoration:none;
+    color:#fff;
+    font-size:12px;
+    margin-top:20px;
+    display: inline-block;
+
+}
+
+.services-list div:hover{
+    background:#ff004f;
+    transform:translateY(-10px);
+}
+
+/*----portfolio--*/
+#portfolio{
+    padding:50px 0;
+
+}
+
+.work-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+
+.work{
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
+}
+
+.work img{
+    width:100%;
+    border-radius: 10px;
+    display:block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width:100%;
+    height:0;
+    background:linear-gradient(rgb(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+    padding:0 40px;
+    text-align:center;
+    font-size:14px;
+    transition:height 0.5s;
+}
+
+.layer h3{
+    font-weight:500;
+    margin-bottom: 20px;
+
+}
+
+
+
+.layer a{
+    margin-top:20px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+  
+}
+
+.work:hover img{
+    transform:scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin:50px auto;
+    width:fit-content;
+    border:1px solid #ff004f;
+    padding:14px 50px;
+    border-radius:6px;
+    text-decoration: none;
+    color:#fff;
+
+}
+
+.btn:hover{
+    background:#ff004f;
+    
+}
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display three cards in a row */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Take up 100% width within the grid item */
+}
+
+/* Add this CSS to set a specific height for the images */
+.work img {
+    width: 100%;
+    height: 200px; /* Adjust this height to your preference */
+    object-fit: cover; /* Ensures the image covers the specified height */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+
+
+/*-------contact-----*/
+#contact {
+    padding: 50px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 30px;
+}
+
+
+
+
+
+
+.btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+    color: #fff;
+    height: 60px; /* Adjust height as needed */
+    line-height: 40px; /* Keep line-height the same as height for vertical centering */
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn.btn2:hover {
+    background: #fff;
+    color: #ff004f;
+}
+
+.sub-title{
+    font-size: 50px;
+}
+
+
+
+
+
+
+.contact-right form {
+    width: 100%;
+ 
+    margin-left: 100px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px; 
+}
+
+
+/*-----css for small screens--------*/
+
+nav .fas {
+    display: none;
+}
+
+
+@media only screen and (max-width:600px)
+{
+  
+
+    .header-text{
+        margin-top:100%;
+        font-size:30px;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px; /* Remove the extra semicolon here */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px; 
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size:40px;
+    }
+
+    .about-col-1,
+.about-col-2 {
+    flex-basis: 100%;
+}
+
+    .tab-links{
+        font-size:16px;
+        margin-right:20px;
+    }
+
+    .contact-left{
+        flex-basis:100%; 
+    }
+
+    .contact-right   {
+        width: 100%;
+      
+        
+     
+    }
+
+    /* Add this CSS for smaller screens */
+
+    .work img {
+        height: 150px; /* Adjust the height for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+/*-----css extra--------*/
+
+/* About Styles */
+/* About Styles */
+.about-container {
+    background-color: #080808;
+    color: #333; /* Dark text color for better visibility */
+    padding: 50px 0;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-card {
+    background-color: #222; /* Dark background color */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    min-width: 300px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.about-card:hover {
+    background-color: #444; /* Darker background color on hover */
+}
+
+.about-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-info {
+    background-color: #ffdb58; /* Yellow */
+}
+
+.about-education {
+    background-color: #87cefa; /* Light Sky Blue */
+}
+
+.about-skills {
+    background-color: #98fb98; /* Pale Green */
+}
+
+.sub-title {
+    color: #fff; /* Set text color to white */
+}
+
+.college-name {
+    font-weight: bold;
+}
+
+.language,
+.others {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .about-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 200px;
+    line-height: 1.5; /* Adjust the line-height as needed */
+}
+
+.text {
+    font-size: 40px;
+    font-weight: bold;
+  color:#EFEB7B;
+    margin-top: 30px;
+    line-height: 1.5; /* Adjust the line-height as needed */
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Adjust the left position as needed */
+}
+
+/* Add this style for the new logo */
+.logo2 {
+    width: 500px; /* Adjust the width as needed */
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Adjust the right position as needed */
+    z-index: 2; /* Ensure it's above other elements */
+}
+
+
+
+
+
+
